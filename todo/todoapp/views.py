@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import TodoItem
-from .serializer import TodoItemSerializer
+from .serializers import TodoItemSerializer
 
 class TodoItemListCreateView(generics.ListCreateAPIView):
     queryset = TodoItem.objects.all().order_by('-created_at')
